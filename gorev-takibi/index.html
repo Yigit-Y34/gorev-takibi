@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Görev Yönetimi</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-4">Hoş Geldiniz!</h1>
+        <div class="gorev-ekle mb-6">
+            <input type="text" placeholder="Görev Adı" id="gorevAdi" class="border border-gray-300 p-2 rounded w-full mb-2">
+            <button onclick="gorevEkle()" class="bg-blue-500 text-white p-2 rounded w-full">Görev Ekle</button>
+        </div>
+        <h3 class="text-xl font-semibold mb-4">Görevleriniz:</h3>
+        <div class="filter-buttons mb-4 flex space-x-2">
+            <button onclick="filterTasks('tümü')" class="bg-gray-200 p-2 rounded">Tümü</button>
+            <button onclick="filterTasks('yapılacak')" class="bg-gray-200 p-2 rounded">Yapılacak</button>
+            <button onclick="filterTasks('yapılıyor')" class="bg-gray-200 p-2 rounded">Yapılıyor</button>
+            <button onclick="filterTasks('tamamlandı')" class="bg-gray-200 p-2 rounded">Tamamlandı</button>
+        </div>
+        <div class="gorevler space-y-4" id="gorevler"></div>
+        <div class="raporlama mt-6 p-4 bg-white rounded shadow">
+            <h4 class="text-lg font-semibold mb-2">Raporlama:</h4>
+            <p id="toplamGorevSayisi">Toplam Görev Sayısı: 0</p>
+            <p id="tamamlananGorevSayisi">Tamamlanan Görev Sayısı: 0</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
